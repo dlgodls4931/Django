@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Polls Application Site{% endblock %}
+
+{% block sidebar %}
+{{ block.super }}
+<div><a href="/polls/">
+        <input type="button" class="btn btn-info" value="Polls_home">
+    </a></div>
+{% endblock %}

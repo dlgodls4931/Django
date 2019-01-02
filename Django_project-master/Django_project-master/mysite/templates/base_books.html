@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Books Application Site{% endblock %}
+
+{% block sidebar %}
+{{ block.super }}
+<div><a href="/books/">
+        <input type="button" class="btn btn-info" value="Books_home">
+    </a></div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base_books.html" %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+{% block content %}
+
+
+<table class="table">
+    <thead>
+        <th scope="row"></th>
+        <th>이름</th>
+        <th>내용</th>
+        <th>이메일</th>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{ object.id }}</th>
+            <td>{{ object.name }}</td>
+            <td>{{ object.salutation }}</td>
+            <td>Email: {{ object.email }}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock content %}

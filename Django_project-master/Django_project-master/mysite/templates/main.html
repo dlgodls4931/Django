@@ -1,0 +1,19 @@
+<!-- books 애플리케이션의 첫 화면 -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<h1>books.html</h1>
+<a href="{% url 'books:index' %}"> <input type="button" class="btn btn-info btn-lg" value="books"> </a>
+
+<h1>admin.html</h1>
+<a href="{% url 'admin:index' %}"><input type="button" class="btn btn-info btn-lg" value="admin"></a>
+
+<h1>myapp.html</h1>
+<a href="{% url 'myapp:index' %}"><input type="button" class="btn btn-info btn-lg" value="myapp"></a>
+
+<h1>login.html</h1>
+<a href="{% url 'userlogin:index' %}"><input type="button" class="btn btn-info btn-lg" value="login"></a>
+
+<hr>
+<br>

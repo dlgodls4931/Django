@@ -1,0 +1,30 @@
+{% extends "base_books.html" %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+{% block content %}
+
+<h1>{{ object.title }}</h1>
+
+<table class="table">
+    <thead>
+        <th scope="row"></th>
+        <th>Authors</th>
+        <th>Publisher</th>
+        <th>Publication date</th>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{ object.id }}</th>
+            <td>{% for author in object.authors.all %}
+
+                {{ author }}
+                {% if not forloop.last %},{% else %}{% endif %}
+                
+              {% endfor %}</td>
+            <td>{{ object.publisher }}</td>
+            <td>{{ object.publication_date }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock content %}

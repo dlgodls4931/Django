@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admin/css/base.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>
+
+        {% block title %}
+            My Amazing Site
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+            <div><a href="/admin/"><input type="button" class="btn btn-info" value="admin"></a></div>
+        {% endblock %}
+        <br>
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    
+</body>
+</html>
+
+<!--
+1. 용도
+    - 모든 app들이 공통적인 화면을 구성 가능하게 하는 상위 html
+2. 개발 방식
+    1. 확장자 : html
+    2. 자식 template에서 수정 가능한 영역은 block 표기로 처리
+-->
